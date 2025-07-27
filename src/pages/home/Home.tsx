@@ -1,4 +1,7 @@
 import { useState, useEffect } from 'react';
+import LandingHeader from './layout/Header';
+import ProvidersSection from './layout/components/ProvidersSection';
+import Footer from './layout/Footer';
 
 export default function Home() {
   // Frases dinámicas para el encabezado
@@ -18,6 +21,8 @@ export default function Home() {
   return (
     <div className="bg-slate-900 min-h-screen text-white font-sans">
       <main>
+        <LandingHeader />
+        
         {/* --- Hero Section --- */}
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
           {/* Fondo con degradado y formas */}
@@ -38,6 +43,9 @@ export default function Home() {
             </button>
           </div>
         </section>
+
+        <ProvidersSection />
+        <Footer />
       </main>
     </div>
   );
